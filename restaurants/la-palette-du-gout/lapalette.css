@@ -8,7 +8,6 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #fff;
-
 }
 
 /**** Font-family******/
@@ -159,7 +158,6 @@ h1 {
     width: 341px;
     height: 29px;
     gap: 0px;
-    opacity: 0px;
     font-family: Shrikhand;
     font-size: 28px;
     font-style: italic;
@@ -169,7 +167,7 @@ h1 {
     margin-right: 15px;
 }
 
-/**** ANIMATION CSS ****/
+/**** ANIMATION CSS FAVORIS****/
 .favorite-checkbox {
     display: none; 
 }
@@ -183,8 +181,6 @@ h1 {
     width: 30px;
     height: 21px;
     gap: 0px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
     top: 8px;
 }
 .heart-empty, .heart-filled {
@@ -216,7 +212,7 @@ h2 {
 
 .menu-item {
     display: flex;
-padding: 0px;
+    padding: 0px;
     border-radius: 15px;
     background-color: white;
     margin-bottom: 20px;
@@ -254,10 +250,6 @@ label {
 }
 .price-box{
     display: flex;
-  
-
-
-    
 }
 /* Case verte (initialement cachée) */
 .checked-box {
@@ -278,7 +270,7 @@ label {
 input[type="checkbox"]:checked + label .item-price {
     margin-right: 10%;
     align-content: center;
-    color: black; /* le prix devient gris quand il se déplace */
+    color: black;
 }
 
 /* Afficher la case verte lorsque la checkbox est cochée */
@@ -290,7 +282,7 @@ input[type="checkbox"] {
 }
 
 
-/**** Animation CSS****/
+/**** Animation CSS COMMANDE****/
 .order-button {
     background-color: #ab47bc;
     color: #fff;
@@ -322,8 +314,6 @@ h4{
     height: 27px;
     font-family: "Shrikhand", serif;
     margin-left: 70px;
-
-
 }
 footer nav{
     width: 100%;
@@ -400,7 +390,6 @@ footer nav ul li a {
         width: 341px;
         height: 29px;
         gap: 0px;
-        opacity: 0px;
         font-family: Shrikhand;
         font-size: 28px;
         font-style: italic;
@@ -418,8 +407,6 @@ footer nav ul li a {
         width: 30px;
         height: 21px;
         gap: 0px;
-        border: 1px 0px 0px 0px;
-        opacity: 0px;
         top: 8px;
         padding-right: 100px;
     }
@@ -519,7 +506,7 @@ footer nav ul li a {
 /****** Entete *****/
 header img{
     width: 197px;
-        height: 36px;
+    height: 36px;
 }
 
 /***** Body ****/
@@ -558,7 +545,6 @@ h1 {
     width: 341px;
     height: 29px;
     gap: 0px;
-    opacity: 0px;
     font-family: Shrikhand;
     font-size: 28px;
     font-style: italic;
@@ -576,8 +562,6 @@ h1 {
     width: 30px;
     height: 21px;
     gap: 0px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
     top: 8px;
     padding-right: 100px;
 }
