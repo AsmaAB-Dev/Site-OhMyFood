@@ -11,7 +11,7 @@ body {
 
 }
 
-/**** font family****/
+/**** Font-family******/
 .roboto-thin {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
@@ -100,7 +100,6 @@ body {
 header img{
     width: 200px;
     height: 34.2px;
-
 }
 .back {
     position: absolute;
@@ -192,7 +191,7 @@ h1 {
     position: absolute; 
     top: 0;
     left: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; 
 }
 .heart-filled {
     color: #b24de6; 
@@ -214,29 +213,82 @@ h2 {
 }
 
 /**** cards-menu ***/
+
 .menu-item {
     display: flex;
-    flex-direction: column;
-    padding: 10px 0;
+padding: 0px;
     border-radius: 15px;
     background-color: white;
     margin-bottom: 20px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     height: 70px;
 }
 .item-name {
     font-weight: bold;
     margin-left: 10px;
+    flex: 1;
 }
 .item-description {
     color: #070707;
     display: flex;
-    justify-content: space-between;
+
     margin-left: 10px;
 }
+.ensemble{
+    display: flex;  
+    flex-direction: column;
+    width: 50%;
+}
 .item-price {
+    transition: margin 0.3s ease, color 0.3s ease;
     font-weight: bold;
     margin-right: 10px;
+    color: black;
 }
+.price-box{
+    display: flex;
+  
+
+
+    
+}
+/* Case verte (initialement cachée) */
+.checked-box {
+    display: none;
+    width: 100px;
+    height: 70px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #bfe7bf;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Changer la couleur et déplacer le prix vers la gauche lorsque la checkbox est cochée */
+input[type="checkbox"]:checked + label .item-price {
+    margin-right: 10%;
+    align-content: center;
+    color: black; /* le prix devient gris quand il se déplace */
+}
+
+/* Afficher la case verte lorsque la checkbox est cochée */
+input[type="checkbox"]:checked + label .checked-box {
+    display: flex;
+}
+input[type="checkbox"] {
+    display: none;
+}
+/* Animation CSS*/
 .order-button {
     background-color: #ab47bc;
     color: #fff;
@@ -288,7 +340,6 @@ footer nav ul {
 .icon-footer{
     margin-right: 5px;
 }
-
 .bas{
     white-space: nowrap;
 }
@@ -367,7 +418,6 @@ footer nav ul li a {
         top: 8px;
         padding-right: 100px;
     }
-    
     h2 {
         font-size: 18px;
         color: #00796b;
@@ -376,7 +426,7 @@ footer nav ul li a {
         margin-bottom: 10px;
         width: 40px;
     }
-    
+
     /**** cards-menu ***/
     .menu-section{
         width: 97%;
@@ -386,13 +436,11 @@ footer nav ul li a {
     .menu-item {
         display: flex;
         flex-direction: column;
-        padding: 10px 0;
         border-radius: 15px;
         background-color: white;
         margin-bottom: 20px;
         height: 70px;
     }
-
     .item-name {
         font-weight: bold;
         margin-left: 10px;
@@ -441,6 +489,7 @@ footer nav ul li a {
         flex-direction: column;
         padding-top: 30px;
     }
+    
     footer nav ul {
         margin-left: 20px;
         display: flex;
@@ -455,7 +504,6 @@ footer nav ul li a {
     .icon-footer{
         margin-right: 10px;
     }
-    
     footer nav ul li a {
         text-decoration: none;
         color: #f8f5fa;
@@ -463,12 +511,12 @@ footer nav ul li a {
     }
     
     
-/***** ****** responsive mobile********/
+/***** *****responsive mobile********/
 @media (max-width: 767.98px) {
 /****** Entete *****/
 header img{
     width: 197px;
-        height: 36px;
+    height: 36px;
 }
 
 /***** Body ****/
@@ -531,7 +579,6 @@ h1 {
     top: 8px;
     padding-right: 100px;
 }
-
 h2 {
     font-size: 18px;
     color: #00796b;
@@ -550,11 +597,13 @@ h2 {
 .menu-item {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
     border-radius: 15px;
     background-color: white;
     margin-bottom: 20px;
     height: 70px;
+}
+.ensemble{
+    width: 70%;
 }
 .item-name {
     font-weight: bold;
@@ -618,7 +667,6 @@ footer nav ul {
 .icon-footer{
     margin-right: 10px;
 }
-
 footer nav ul li a {
     text-decoration: none;
     color: #f8f5fa;
