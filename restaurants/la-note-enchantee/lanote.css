@@ -167,7 +167,7 @@ main {
 }
 
 h1 {
-    width: 220px;
+   
     height: 29px;
     gap: 0px;
     font-family: Shrikhand;
@@ -454,7 +454,7 @@ footer nav ul li a {
         height: 21px;
         gap: 0px;
         top: 8px;
-        padding-right: 100px;
+        
     }
 
     h2 {
