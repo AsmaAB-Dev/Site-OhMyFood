@@ -47,48 +47,6 @@ body {
     font-style: normal;
 }
 
-.roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-}
-
-.roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-}
-
-.roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-}
-
-.shrikhand-regular {
-    font-family: "Shrikhand", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 /****** Entete *****/
 .logo {
     width: 100%;
@@ -167,7 +125,6 @@ main {
 }
 
 h1 {
-   
     height: 29px;
     gap: 0px;
     font-family: Shrikhand;
@@ -217,7 +174,8 @@ h1 {
     opacity: 1; 
 }
 
-h2 {
+/**** cards-menu ***/
+h2{
     font-size: 18px;
     color: rgb(151, 149, 149);
     border-bottom: 2px solid rgba(153, 226, 208, 1);
@@ -230,9 +188,8 @@ h2 {
     line-height: 18.75px;
     text-align: left;
 }
-
-/**** cards-menu ***/
-
+/**** cards-menu simplifié ***/
+/**** Apparence et animation des éléments du menu ****/
 .menu-item {
     display: flex;
     padding: 0px;
@@ -240,14 +197,65 @@ h2 {
     background-color: white;
     margin-bottom: 20px;
     height: 70px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease; /* Ajout du zoom */
+    opacity: 0; /* Commence invisible */
+    animation: fadeIn 0.5s ease forwards; /* Animation d'apparition uniquement sur l'opacité */
+    transition: transform 0.3s ease; /* Transition pour le zoom */
+}
+
+/* Animation d'apparition basée sur l'opacité uniquement */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Invisible au début */
+    }
+    100% {
+        opacity: 1; /* Complètement visible à la fin */
+    }
+}
+
+/* Appliquer un délai d'animation entre chaque repas*/
+
+.menu-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.menu-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.menu-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.menu-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.menu-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.menu-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.menu-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.menu-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.menu-item:nth-child(9) {
+    animation-delay: 0.9s;
 }
 
 /* Effet hover avec zoom */
 .menu-item:hover {
-    transform: scale(1.02); /* Zoom léger à 102% */
+    transform: scale(1.02); /* Zoom léger à 105% */
+    transition: transform 0.3s ease; /* Transition uniquement pour le zoom */
 }
+
 
 label {
     display: flex;
@@ -300,7 +308,6 @@ label {
     font-size: 20px;
     transition: all 0.3s ease;
 }
-
 /* Faire apparaître la case verte et déplacer le prix lors du survol */
 .menu-item:hover .item-price {
     margin-right: 10%;
@@ -454,7 +461,6 @@ footer nav ul li a {
         height: 21px;
         gap: 0px;
         top: 8px;
-        
     }
 
     h2 {
