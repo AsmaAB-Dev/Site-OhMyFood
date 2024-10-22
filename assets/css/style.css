@@ -283,13 +283,13 @@ header .location {
 }
 .badge {
     background-color: #5ef6c3;
-    color: rgb(255, 255, 255);
-    padding: 2px 8px;
-    width: 70px;
-    font-size: 12px;
-    position: relative;
-    left: 80%;
-    bottom: 150px;
+        color: rgb(255, 255, 255);
+        padding: 2px 8px;
+        width: 70px;
+        font-size: 12px;
+        position: relative;
+        left: 83%;
+        bottom: 170px;
 }
 
 
@@ -496,8 +496,9 @@ footer nav ul li a {
         width: 70px;
         font-size: 12px;
         position: relative;
-        left: 80%;
-        bottom: 150px;
+        left: 83%;
+        bottom: 170px;
+
     }
 
     /* Footer */
@@ -691,8 +692,8 @@ header img{
     width: 70px;
     font-size: 12px;
     position: relative;
-    left: 80%;
-    bottom: 150px;
+    left: 83%;
+    bottom: 170px;
 }
 
 /* Footer */

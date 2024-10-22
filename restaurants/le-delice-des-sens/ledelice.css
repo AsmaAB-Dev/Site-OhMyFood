@@ -198,22 +198,24 @@ h2{
     margin-bottom: 20px;
     height: 70px;
     opacity: 0; /* Commence invisible */
-    animation: fadeIn 0.5s ease forwards; /* Animation d'apparition uniquement sur l'opacité */
+    transform: translateX(-100px); /* Commence décalé vers la gauche */
+    animation: slideIn 0.5s ease forwards; /* Animation d'apparition */
     transition: transform 0.3s ease; /* Transition pour le zoom */
 }
 
-/* Animation d'apparition basée sur l'opacité uniquement */
-@keyframes fadeIn {
+/* Animation d'apparition basée sur une translation de gauche vers la droite */
+@keyframes slideIn {
     0% {
-        opacity: 0; /* Invisible au début */
+        opacity: 0;
+        transform: translateX(-100px); /* Position initiale hors écran à gauche */
     }
     100% {
-        opacity: 1; /* Complètement visible à la fin */
+        opacity: 1;
+        transform: translateX(0); /* Position finale au bon endroit */
     }
 }
 
 /* Appliquer un délai d'animation entre chaque repas*/
-
 .menu-item:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -246,13 +248,12 @@ h2{
     animation-delay: 0.8s;
 }
 
-
-
 /* Effet hover avec zoom */
 .menu-item:hover {
-    transform: scale(1.02); /* Zoom léger à 105% */
+    transform: scale(1.02); /* Zoom léger à 102% */
     transition: transform 0.3s ease; /* Transition uniquement pour le zoom */
 }
+
 
 
 label {
