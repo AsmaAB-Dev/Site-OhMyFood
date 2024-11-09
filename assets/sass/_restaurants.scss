@@ -1,0 +1,90 @@
+@use 'variables';
+.restaurants {
+    background-color: variables.$background-color;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.restaurants h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    width: 73%;
+    color: variables.$text-color;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    width: 90%;
+}
+
+.restaurant {
+    background-color: white;
+    height: 251px;
+    width: 39%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.restaurant-badge {
+    width: 100%;
+    position: relative;
+    height: 180px;
+    border-radius: 20px;
+}
+
+.restaurant img {
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 25px 0 18px;
+    height: 50px;
+}
+
+.restaurant-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-decoration: none; // Supprime le soulignement
+    color: variables.$text-color;
+}
+
+.restaurant-info p {
+    font-size: 17px;
+    color: variables.$text-color;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 5px;
+}
+.restaurant a{
+    text-decoration: none;
+    width: 100%;
+}
+
+.badge {
+    background-color: variables.$secondary-color;
+    color: variables.$background-color;
+    padding: 2px 8px;
+    width: 70px;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+

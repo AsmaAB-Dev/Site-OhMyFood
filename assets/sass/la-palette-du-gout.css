@@ -1,0 +1,23 @@
+body {
+  background-color: #03A9F4;
+  color: white;
+}
+
+.header {
+  background-color: #2196F3;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.menu {
+  padding: 20px;
+}
+.menu .menu-item {
+  padding: 15px;
+  border: 1px solid white;
+  transition: background-color 0.3s;
+}
+.menu .menu-item:hover {
+  background-color: #51adf6;
+}/*# sourceMappingURL=la-palette-du-gout.css.map */

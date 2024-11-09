@@ -1,0 +1,49 @@
+@use 'variables';
+
+
+footer {
+    width: 100%;
+    background-color: variables.$footer-background;
+    padding: 15px;
+    height: 114px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+footer h4 {
+    font-family: "Shrikhand", serif;
+    margin-left: 20px;
+    color: variables.$background-color;
+    width: 139px;
+    height: 27px;
+}
+
+footer nav ul {
+    display: flex;
+    margin-right: 15px;
+    line-height: 20px;
+    font-size: 16px;
+    gap: 30px;
+    list-style-type: none;
+    color: variables.$background-color;
+}
+
+.icon-footer { margin-right: 5px; }
+
+footer nav{
+    width: 100%;
+    height: 114px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row-reverse;
+    color: variables.$background-color;
+}
+footer nav ul li a {
+    text-decoration: none;
+    color: variables.$background-color;
+    display: flex;
+    align-items: center;
+}
+

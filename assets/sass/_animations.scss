@@ -1,0 +1,40 @@
+@use 'variables';
+
+
+.favorite-checkbox {
+    display: none;
+}
+
+.favorite-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    width: 30px;
+    color: variables.$text-color;
+
+    .heart-empty {
+        color: variables.$text-color;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .heart-filled {
+        color: variables.$fav-button-color;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .favorite-checkbox:checked + & .heart-empty {
+        opacity: 0;
+    }
+
+    .favorite-checkbox:checked + & .heart-filled {
+        opacity: 1;
+    }
+}
+
