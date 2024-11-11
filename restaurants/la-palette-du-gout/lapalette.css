@@ -204,7 +204,6 @@ h2{
     opacity: 0; /* Commence invisible */
     transform: translateX(-100px); /* Commence décalé vers la gauche */
     animation: slideIn 1.8s ease forwards; /* Animation d'apparition */
-    transition: background-color 0.3s ease; /* Transition pour le zoom */
 }
 
 /* Animation d'apparition basée sur une translation de gauche vers la droite */
@@ -252,17 +251,6 @@ h2{
     animation-delay: 0.8s;
 }
 
-/* Animation d'apparition pour la case verte */
-@keyframes slideInCheckedBox {
-    0% {
-        opacity: 0;
-        transform: translateX(100px); /* Décalage initial à droite */
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0); /* Position finale */
-    }
-}
 
 label {
     display: flex;
@@ -331,13 +319,6 @@ label {
     display: flex;
 }
 
-
-
-
-
-input[type="checkbox"] {
-    display: none;
-}
 
 /**** Animation CSS COMMANDE****/
 .order-button {
@@ -449,7 +430,6 @@ footer nav ul li a {
     .menu-title {
         height: 40px;
         display: flex;
-        justify-content: space-between;
         margin-bottom: 20px;
         padding-left: 30%;
     overflow: hidden;
@@ -714,8 +694,6 @@ footer nav ul li a {
 
     .item-description {
         color: #070707;
-        display: flex;
-        justify-content: space-between;
         margin-left: 10px;
         white-space: nowrap;
         overflow: hidden;
