@@ -136,6 +136,15 @@ top: 20px;
 right: 20px;
 
     }
+    .menu-item-title {
+        display: inline-block;       /* Permet au rognage de fonctionner */
+        width: 150px;                /* Ajustez cette largeur pour le rognage */
+        white-space: nowrap;         /* Empêche le retour à la ligne */
+        overflow: hidden;            /* Cache le texte qui dépasse */
+        text-overflow: ellipsis;     /* Ajoute des points de suspension */
+        font-size: 16px;             /* Assurez-vous que la taille de police n'est pas trop grande */
+    }
+    
 
     /* Footer */
     footer {

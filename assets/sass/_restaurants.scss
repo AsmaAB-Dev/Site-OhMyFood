@@ -78,13 +78,14 @@
 
 .badge {
     background-color: variables.$secondary-color;
-    color: variables.$background-color;
     padding: 2px 8px;
     width: 70px;
     font-size: 12px;
     position: absolute;
     top: 20px;
     right: 20px;
+    color:variables.$badge-color;
+    
 }
 
 

@@ -1,40 +1,38 @@
-@use 'variables';
 
-
+/**** ANIMATION CSS FAVORIS****/
 .favorite-checkbox {
-    display: none;
+    display: none; 
 }
 
 .favorite-button {
     background: none;
     border: none;
+    color: #080808;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 24px;
     position: relative;
     width: 30px;
-    color: variables.$text-color;
-
-    .heart-empty {
-        color: variables.$text-color;
-        opacity: 1;
-        transition: opacity 0.3s ease;
-    }
-
-    .heart-filled {
-        color: variables.$fav-button-color;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .favorite-checkbox:checked + & .heart-empty {
-        opacity: 0;
-    }
-
-    .favorite-checkbox:checked + & .heart-filled {
-        opacity: 1;
-    }
+    height: 21px;
+    gap: 0px;
+    top: 8px;
 }
 
+.heart-empty, .heart-filled {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease; 
+}
+
+.heart-filled {
+    color: #b24de6; 
+    opacity: 0; 
+}
+
+.favorite-checkbox:checked + .favorite-button .heart-empty {
+    opacity: 0; 
+}
+
+.favorite-checkbox:checked + .favorite-button .heart-filled {
+    opacity: 1; 
+}

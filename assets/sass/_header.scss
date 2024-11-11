@@ -14,7 +14,7 @@ header {
     background-color: white; // Fond blanc pour le logo
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    align-items: center;
 }
 
 header img { width: 200px; height: 34.2px; }
@@ -22,12 +22,20 @@ header img { width: 200px; height: 34.2px; }
 .location {
     font-size: 16px;
     color: variables.$text-color;
-    background-color: rgba(234, 234, 234, 1);
+    background-color: variables.$header-background;
     align-items: center;
     height: 50px;
     display: flex;
     justify-content: center;
     width:100%;
+    margin-left: 50px;
+}
+
+.location input{
+    text-decoration: none;
+    background-color: variables.$header-background;
+    color: variables.$text-color;
+    border: none;
 }
 
 .icon { margin-right: 15px; }

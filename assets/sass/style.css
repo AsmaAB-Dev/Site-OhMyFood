@@ -153,7 +153,8 @@ header {
   background-color: white;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  align-items: center;
+  padding-top: 20px;
 }
 
 header img {
@@ -170,6 +171,14 @@ header img {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-left: 50px;
+}
+
+.location input {
+  text-decoration: none;
+  background-color: rgb(234, 234, 234);
+  color: black;
+  border: none;
 }
 
 .icon {
@@ -215,38 +224,38 @@ header img {
   color: #f2e6ff;
   transform: scale(1.05);
 }
-
-.favorite-checkbox {
-  display: none;
-}
-
 .favorite-button {
-  background: none;
-  border: none;
+  display: inline-block;
+  width: 40px; /* Taille du bouton */
+  height: 40px;
   cursor: pointer;
-  font-size: 30px;
   position: relative;
-  width: 30px;
-  color: black;
 }
-.favorite-button .heart-empty {
-  color: black;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+
+.heart-icon {
+  display: inline-block;
+  width: 100%; /* Taille de l'icône */
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="gray" stroke-width="1" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat center;
+  background-size: contain;
+  position: relative;
 }
-.favorite-button .heart-filled {
-  color: #b24de6;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+
+.heart-icon::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
+  width: 0; /* Début de remplissage */
+  height: 100%;
+  background: red; /* Couleur de remplissage */
+  clip-path: url(#heart-clip); /* Utilise un clip-path pour la forme du cœur */
+  transition: width 0.5s ease; /* Transition pour un remplissage progressif */
+  z-index: -1;
 }
-.favorite-checkbox:checked + .favorite-button .heart-empty {
-  opacity: 0;
-}
-.favorite-checkbox:checked + .favorite-button .heart-filled {
-  opacity: 1;
+
+.favorite-button:hover .heart-icon::after {
+  width: 100%; /* Remplit complètement au survol */
 }
 
 .fonctionnement {
@@ -405,13 +414,13 @@ header img {
 
 .badge {
   background-color: #5ef6c3;
-  color: rgb(248, 245, 245);
   padding: 2px 8px;
   width: 70px;
   font-size: 12px;
   position: absolute;
   top: 20px;
   right: 20px;
+  color: #043327;
 }
 
 footer {
