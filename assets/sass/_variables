@@ -1,8 +1,0 @@
-// Variables de couleur
-$primary-color: #9356DC;  // Couleur violette utilisée pour les boutons
-$secondary-color: #5ef6c3; // Couleur verte des badges
-$text-color: #666;
-$background-color: rgb(248, 245, 245);
-$header-background: rgba(234, 234, 234, 1);
-$footer-background: rgb(43, 42, 42);
-$hover-color: #c082e6;

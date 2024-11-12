@@ -162,9 +162,12 @@ h1 {
 }
 
 .heart-filled {
-    color: #b24de6; 
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    -webkit-background-clip: text; /* Appliquer le dégradé uniquement au texte */
+    -webkit-text-fill-color: transparent; /* Rendre le texte transparent pour laisser apparaître le dégradé */
     opacity: 0; 
 }
+
 
 .favorite-checkbox:checked + .favorite-button .heart-empty {
     opacity: 0; 
@@ -249,17 +252,6 @@ h2{
     animation-delay: 0.8s;
 }
 
-/* Animation d'apparition pour la case verte */
-@keyframes slideInCheckedBox {
-    0% {
-        opacity: 0;
-        transform: translateX(100px); /* Décalage initial à droite */
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0); /* Position finale */
-    }
-}
 
 label {
     display: flex;
@@ -273,18 +265,26 @@ label {
     font-weight: bold;
     margin-left: 10px;
     flex: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .item-description {
     color: #070707;
-    display: flex;
     margin-left: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .ensemble {
     display: flex;
     flex-direction: column;
     width: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .item-price {
@@ -328,17 +328,13 @@ label {
     display: flex;
 }
 
-
-
-
-
 input[type="checkbox"] {
     display: none;
 }
 
 /**** Animation CSS COMMANDE****/
 .order-button {
-    background-color: #ab47bc;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -695,8 +691,6 @@ footer nav ul li a {
 
     .item-description {
         color: #070707;
-        display: flex;
-        justify-content: space-between;
         margin-left: 10px;
     }
 

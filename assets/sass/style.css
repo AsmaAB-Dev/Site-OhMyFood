@@ -1,6 +1,21 @@
-body {
-  background-color: #03A9F4;
-  color: white;
+@charset "UTF-8";
+.header {
+  background-color: #2196F3;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.menu {
+  padding: 20px;
+}
+.menu .menu-item {
+  padding: 15px;
+  border: 1px solid white;
+  transition: background-color 0.3s;
+}
+.menu .menu-item:hover {
+  background-color: #51adf6;
 }
 
 .header {
@@ -21,10 +36,10 @@ body {
 .menu .menu-item:hover {
   background-color: #51adf6;
 }
-
-body {
-  background-color: #03A9F4;
-  color: white;
+.menu .menu-title {
+  width: 100%;
+  padding-left: 0px;
+  height: 40px;
 }
 
 .header {
@@ -44,35 +59,6 @@ body {
 }
 .menu .menu-item:hover {
   background-color: #51adf6;
-}
-
-body {
-  background-color: #03A9F4;
-  color: white;
-}
-
-.header {
-  background-color: #2196F3;
-  padding: 20px;
-  text-align: center;
-  font-size: 2em;
-}
-
-.menu {
-  padding: 20px;
-}
-.menu .menu-item {
-  padding: 15px;
-  border: 1px solid white;
-  transition: background-color 0.3s;
-}
-.menu .menu-item:hover {
-  background-color: #51adf6;
-}
-
-body {
-  background-color: #03A9F4;
-  color: white;
 }
 
 .header {
@@ -154,7 +140,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
 }
 
 header img {
@@ -163,7 +148,7 @@ header img {
 }
 
 .location {
-  font-size: 16px;
+  font-size: 18px;
   color: black;
   background-color: rgb(234, 234, 234);
   align-items: center;
@@ -171,6 +156,7 @@ header img {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-left: 100px;
 }
 
 .location input {
@@ -178,6 +164,7 @@ header img {
   background-color: rgb(234, 234, 234);
   color: black;
   border: none;
+  font-size: 18px;
 }
 
 .icon {
@@ -207,7 +194,7 @@ header img {
 }
 
 .explore-button {
-  background-color: #9356DC;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
@@ -223,40 +210,107 @@ header img {
   color: #f2e6ff;
   transform: scale(1.05);
 }
+
+/**** ANIMATION CSS FAVORIS****/
+.favorite-checkbox {
+  display: none;
+}
+
 .favorite-button {
-  display: inline-block;
-  width: 40px; /* Taille du bouton */
-  height: 40px;
+  background: none;
+  border: none;
+  color: #080808;
   cursor: pointer;
+  font-size: 24px;
   position: relative;
+  width: 30px;
+  height: 21px;
+  gap: 0px;
+  top: 8px;
 }
 
-.heart-icon {
-  display: inline-block;
-  width: 100%; /* Taille de l'icône */
-  height: 100%;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="gray" stroke-width="1" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat center;
-  background-size: contain;
-  position: relative;
-}
-
-.heart-icon::after {
-  content: "";
+.heart-empty, .heart-filled {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0; /* Début de remplissage */
+  transition: opacity 0.3s ease;
+}
+
+.heart-filled {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text; /* Appliquer le dégradé uniquement au texte */
+  -webkit-text-fill-color: transparent; /* Rendre le texte transparent pour laisser apparaître le dégradé */
+  opacity: 0;
+}
+
+.favorite-checkbox:checked + .favorite-button .heart-empty {
+  opacity: 0;
+}
+
+.favorite-checkbox:checked + .favorite-button .heart-filled {
+  opacity: 1;
+}
+
+/* Masquer le contenu principal pendant le chargement */
+.content {
+  animation: showContent 0.5s ease forwards 3s; /* Affiche le contenu après 3 secondes */
+}
+
+/* Loader container */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background: red; /* Couleur de remplissage */
-  clip-path: url(#heart-clip); /* Utilise un clip-path pour la forme du cœur */
-  transition: width 0.5s ease; /* Transition pour un remplissage progressif */
-  z-index: -1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeOut 0.5s ease 1s forwards; /* Disparition du loader après 3 secondes */
 }
 
-.favorite-button:hover .heart-icon::after {
-  width: 100%; /* Remplit complètement au survol */
+/* Style et animation du texte OhMyFood */
+.loader-text {
+  font-size: 3rem;
+  font-family: "Shrikhand";
+  background: linear-gradient(to right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 3s ease forwards;
 }
 
+/* Animation pour faire glisser le texte de gauche à droite */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Disparition du loader */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Apparition du contenu principal */
+@keyframes showContent {
+  from {
+    display: block;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
 .fonctionnement {
   width: 100%;
   height: 228.38px;
@@ -605,6 +659,14 @@ footer nav ul li a {
     top: 20px;
     right: 20px;
   }
+  .menu-item-title {
+    display: inline-block; /* Permet au rognage de fonctionner */
+    width: 150px; /* Ajustez cette largeur pour le rognage */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajoute des points de suspension */
+    font-size: 16px; /* Assurez-vous que la taille de police n'est pas trop grande */
+  }
   /* Footer */
   footer {
     width: 100%;
@@ -676,7 +738,6 @@ footer nav ul li a {
     height: 50px;
     top: 62.5px;
     left: -0.5px;
-    gap: 17px;
   }
   /* Introduction */
   .intro h1 {
